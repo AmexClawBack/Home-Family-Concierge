@@ -101,6 +101,10 @@ a {
   color: var(--cream);
 }
 
+.nav a {
+  transition: 0.25s ease;
+}
+
 .nav a:hover {
   color: var(--gold);
 }
@@ -111,8 +115,10 @@ a {
   color: var(--gold) !important;
 }
 
+/* Hamburger hidden on desktop */
+
 .menu-toggle {
-  display: none;
+  display: none !important;
   width: 46px;
   height: 46px;
   background: transparent;
@@ -122,6 +128,7 @@ a {
   justify-content: center;
   flex-direction: column;
   gap: 6px;
+  padding: 0;
 }
 
 .menu-toggle span {
@@ -130,6 +137,8 @@ a {
   background: var(--gold);
   display: block;
 }
+
+/* Mobile */
 
 @media (max-width: 760px) {
   .nav-wrap {
@@ -148,54 +157,7 @@ a {
   }
 
   .menu-toggle {
-    display: flex;
-  }
-
-  .nav {
-    position: absolute;
-    top: 78px;
-    left: 0;
-    width: 100%;
-    background: var(--green-dark);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 28px 0;
-    border-top: 1px solid rgba(215, 180, 106, 0.25);
-    border-bottom: 1px solid rgba(215, 180, 106, 0.25);
-  }
-
-  .nav.active {
-    display: flex;
-  }
-}
-
-/* Mobile Nav */
-
-@media (max-width: 760px) {
-  .nav-wrap {
-    height: 78px;
-  }
-
-  .logo {
-    gap: 10px;
-  }
-
-  .logo .nav-logo {
-    width: 38px !important;
-    height: 38px !important;
-    max-width: 38px !important;
-    max-height: 38px !important;
-  }
-
-  .logo-text {
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
-  }
-
-  .menu-toggle {
-    display: flex;
+    display: flex !important;
   }
 
   .nav {
